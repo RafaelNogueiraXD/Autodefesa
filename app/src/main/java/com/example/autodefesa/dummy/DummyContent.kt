@@ -1,7 +1,8 @@
 package com.example.autodefesa.dummy
 
-import java.util.ArrayList
-import java.util.HashMap
+import com.example.autodefesa.Aulas
+import java.util.*
+
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -39,35 +40,29 @@ object DummyContent {
     }
 
     private fun createDummyItem(position: Int): DummyItem {
-        if(position != 1){
-            tituloAula = "Aula " + position
-        }
-        return DummyItem(position.toString(), tituloAula, makeDetails(position))
+        val contentAula = Aulas()
+        val nomeAula = contentAula.nomeNoMenu(position)
+        return DummyItem(position.toString(), nomeAula, makeDetails(position))
     }
 
     private fun makeDetails(position: Int): String {
         val builder = StringBuilder()
-        pegaPositionDeterminaTituloConteudo(position)
-        builder.append(fazendoText)
-        for (i in 0..position - 1) {
-            builder.append("\n Texto da aula a ser aplicada.")
-        }
+//        pegaPositionDeterminaTituloConteudo(position)
+//        builder.append(fazendoText)
+//        for (i in 0..position - 1) {
+//            builder.append("\n Texto da aula a ser aplicada.")
+//        }
+        val contentAula = Aulas()
+        val recebeTitulo = contentAula.tituloAula(position)
+        builder.append(recebeTitulo)
+
+        val recebeConteudo = contentAula.conteudoAula(position)
+        builder.append(
+                """
+                    $recebeConteudo
+                """.trimIndent()
+        )
         return builder.toString()
-    }
-    private fun pegaPositionDeterminaTituloConteudo(position: Int){
-        if(position == 1){
-            fazendoText = "Primeiro texto a ser escrito "
-        }else{
-            fazendoText = "Outros textos sendo escritos" + position
-        }
-        when(position){
-            1 -> fazendoText = "Primeiro texto a ser escrito"
-            2 -> fazendoText = "Aula de treinamento Fisico"
-            3 -> fazendoText = "Aula de treinamento da Perna"
-            else -> {
-                fazendoText = "outros textos sendo escritos" + position
-            }
-        }
     }
 
     /**
