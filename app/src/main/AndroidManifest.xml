@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Autodefesa">
+        <activity android:name=".agenda"></activity>
         <activity android:name=".testeAtivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +20,7 @@
         <activity
             android:name=".ItemListActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Autodefesa.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Autodefesa.NoActionBar"></activity>
         <activity
             android:name=".ItemDetailActivity"
             android:label="@string/title_item_detail"

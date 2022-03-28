@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agenda">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agenda"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputAtividade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a Atividade" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Anotar" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="280dp"
+                android:layout_height="247dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Realizada a Aula 01"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="28/03/2022"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Aula Introdutória"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="29/03/2022"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <TextView
+                        android:id="@+id/mostraAtividade"
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/mostraData"
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
